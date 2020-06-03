@@ -1,0 +1,104 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background: #7a7676;
+}
+
+nav {
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.fa-chart-bar {
+    font-size: 1.6em;
+    margin-top: 10.25px;
+}
+
+.jumbotron {
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+    background: url("../images/jumbotronImage.png");
+    color: white;
+    
+}
+
+.jumbotron h1 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-top: 3rem;
+}
+
+.jumbotron p {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.checkbox-inline input {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+#title {
+    text-decoration: underline;
+    float: right;
+    margin-left: 8px;
+}
+
+#headerButtons {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#calendarButton {
+    margin-left: 4rem;
+    margin-right: 0;
+}
+
+#divider {
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 5px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+#checkboxAndSubmit {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#submitButton {
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    border-color: #353535;
+}
+
+#submitForm {
+    padding-left: 0px;
+    margin-left: 6px;
+}
+
+
+#shipUSButton {
+    margin-left: 40px;
+}
+
+#resaleMethods label {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#resaleMethods {
+    margin-right: 5px;
+}

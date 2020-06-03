@@ -1,0 +1,58 @@
+<%- include("./partials/header") %>
+
+<div class="container col-md-12 m-0 p-0">
+    <section id="header" class="jumbotron text-center d-flex flex-column align-items-start">
+        <h1 class="display-4">PROFIT CALCULATOR</h1>
+        <p class="lead">Counts for Duties, Exchange Rate, and Fees!</p>
+    </section>
+</div>
+
+<hr id="divider">
+
+<div class="container col-6 form-row">
+    <div class="form-group col-4">
+        <label for="retailorCurrency">Retailor's Region</label>
+        <select class="form-control form-control-sm" id="retailorCurrency">
+            <option value="USD">USA</option>
+            <option value="CAD">Canada</option>
+            <option value="EUR">EU</option>
+            <option value="GBP">UK</option>
+        </select>
+    </div>
+    <div class="form-group col-4">
+        <label for="destinationCountry">Shipping To...</label>
+        <select class="form-control form-control-sm" id="destinationCountry">
+            <option value="USD">USA</option>
+            <option value="CAD">Canada</option>
+            <option value="EUR">Europe Reship</option>
+        </select>
+    </div>
+    <div class="form-group col-4">
+        <label for="currencyLocal">Your Currency</label>
+        <select class="form-control form-control-sm" id="currencyLocal">
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+    </div>
+    <form action="/recent" method="POST" class="col-12">
+        <div class="form-group">
+            <input class="form-control" type="text" name="shoeName" placeholder="Name of Shoe">
+        </div>
+    </form>
+    <div class="container d-inline-flex justify-content-between" id="checkboxAndSubmit">
+        <div class="container col-8 d-flex align-items-end" id="resaleMethods">
+            <label for="">Select method(s) of resale:</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">Local</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">StockX</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">eBay</label>
+            <label class="checkbox-inline"><input type="checkbox" value="">Goat</label>
+        </div>
+        <div class="container col-4" id="submitForm">
+            <button id="submitButton" type="button" class="btn btn-light col-12">Search!</button>
+        </div>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>
