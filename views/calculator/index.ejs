@@ -1,0 +1,61 @@
+<%- include("../partials/header") %>
+
+<div class="container col-md-12 m-0 p-0">
+    <section id="header" class="jumbotron text-center d-flex flex-column align-items-start">
+        <h1 class="display-4">PROFIT CALCULATOR</h1>
+        <p class="lead">Counts for Duties, Exchange Rate, and Fees!</p>
+    </section>
+</div>
+
+<hr id="divider">
+
+<div class="container col-6 form-row">
+    <form action="/calculator" method="POST" class="col-12">
+        <div class="container col-12 d-inline-flex">
+            <div class="form-group col-4" id="retailerCurrencyDropDown">
+                <label for="retailorCurrency">Retailer's Region</label>
+                <select class="form-control form-control-sm" id="retailorCurrency">
+                    <option value="CAD">Canada</option>
+                    <option value="USD">USA</option>
+                    <option value="EUR">EU</option>
+                    <option value="GBP">UK</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="destinationCountry">Shipping To...</label>
+                <select class="form-control form-control-sm" id="destinationCountry">
+                    <option value="CAN">Canada</option>
+                    <option value="USAPick">USA Pickup</option>
+                    <option value="USAReship">USA Reship</option>
+                    <option value="EUR">Europe Reship</option>
+                </select>
+            </div>
+            <div class="form-group col-4" id="yourCurrencyDropDown">
+                <label for="currencyLocal">Your Currency</label>
+                <select class="form-control form-control-sm" id="currencyLocal">
+                    <option value="USD">USD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-12">
+            <input class="form-control" type="text" name="shoeName" placeholder="Name of Shoe">
+        </div>
+        <div class="container d-inline-flex justify-content-between" id="checkboxAndSubmit">
+            <div class="container col-8 d-flex align-items-end" id="resaleMethods">
+                <label for="">Select method(s) of resale:</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Local</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">StockX</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">eBay</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Goat</label>
+            </div>
+            <div class="container col-4" id="submitForm">
+                <button id="submitButton" class="btn btn-light col-12">Search!</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include("../partials/footer") %>
