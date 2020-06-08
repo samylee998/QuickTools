@@ -41,6 +41,20 @@ nav {
     margin-left: 20px;
 }
 
+.card {
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.card-body {
+    padding-top: 5px;
+}
+
+.card-img-right {
+    max-height: 140px;
+    padding-left: 20px;
+}
+
 #title {
     text-decoration: underline;
     float: right;

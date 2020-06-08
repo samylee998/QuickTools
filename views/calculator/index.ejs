@@ -9,8 +9,8 @@
 
 <hr id="divider">
 
-<div class="container col-6 form-row">
-    <form action="/calculator" method="POST" class="col-12">
+<div class="container col-6 form-row d-inline-flex">
+    <form class="col-12">
         <div class="container col-12 d-inline-flex">
             <div class="form-group col-4" id="retailerCurrencyDropDown">
                 <label for="retailorCurrency">Retailer's Region</label>
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="form-group col-12">
-            <input class="form-control" type="text" name="shoeName" placeholder="Name of Shoe">
+            <input class="form-control shoeName" type="text" name="shoeName" placeholder="Name of Shoe">
         </div>
         <div class="container d-inline-flex justify-content-between" id="checkboxAndSubmit">
             <div class="container col-8 d-flex align-items-end" id="resaleMethods">
@@ -56,6 +56,50 @@
             </div>
         </div>
     </form>
+</div>
+
+<div class="container col-6 d-inline-flex flex-column">
+        <h4>Search Results</h4>
+        <div class="card flex-row flex-wrap d-none searchResult0">
+            <img class="card-img-right searchShoeImage0" src="">
+            <div class="card-body">
+                <h3 class="card-title searchShoeName0"></h3>
+                <p class="card-text searchDetails0"></p>
+                <a href="#" class="btn btn-primary">See more details</a>
+            </div>
+        </div>
+        <div class="card flex-row flex-wrap d-none searchResult1">
+            <img class="card-img-right searchShoeImage1" src="">
+            <div class="card-body">
+                <h3 class="card-title searchShoeName1"></h3>
+                <p class="card-text searchDetails1"></p>
+                <a href="#" class="btn btn-primary">See more details</a>
+            </div>
+        </div>
+        <div class="card flex-row flex-wrap d-none searchResult2">
+            <img class="card-img-right searchShoeImage2" src="">
+            <div class="card-body">
+                <h3 class="card-title searchShoeName2"></h3>
+                <p class="card-text searchDetails2"></p>
+                <a href="#" class="btn btn-primary">See more details</a>
+            </div>
+        </div>
+        <div class="card flex-row flex-wrap d-none searchResult3">
+            <img class="card-img-right searchShoeImage3" src="">
+            <div class="card-body">
+                <h3 class="card-title searchShoeName3"></h3>
+                <p class="card-text searchDetails3"></p>
+                <a href="#" class="btn btn-primary">See more details</a>
+            </div>
+        </div>
+        <div class="card flex-row flex-wrap d-none searchResult4">
+            <img class="card-img-right searchShoeImage4" src="">
+            <div class="card-body">
+                <h3 class="card-title searchShoeName4"></h3>
+                <p class="card-text searchDetails4"></p>
+                <a href="#" class="btn btn-primary">See more details</a>
+            </div>
+        </div>
 </div>
 
 <%- include("../partials/footer") %>
