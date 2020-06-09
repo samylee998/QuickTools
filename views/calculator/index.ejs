@@ -9,12 +9,12 @@
 
 <hr id="divider">
 
-<div class="container col-6 form-row d-inline-flex">
-    <form class="col-12">
+<div class="container col-6 d-flex">
+    <form class="col-12" action="/calculator/results" method="GET">
         <div class="container col-12 d-inline-flex">
             <div class="form-group col-4" id="retailerCurrencyDropDown">
                 <label for="retailorCurrency">Retailer's Region</label>
-                <select class="form-control form-control-sm" id="retailorCurrency">
+                <select class="form-control form-control-sm" id="retailorCurrency" name="options[retailorRegion]">
                     <option value="CAD">Canada</option>
                     <option value="USD">USA</option>
                     <option value="EUR">EU</option>
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group col-4">
                 <label for="destinationCountry">Shipping To...</label>
-                <select class="form-control form-control-sm" id="destinationCountry">
+                <select class="form-control form-control-sm" id="destinationCountry" name="options[shippingDest]">
                     <option value="CAN">Canada</option>
                     <option value="USAPick">USA Pickup</option>
                     <option value="USAReship">USA Reship</option>
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group col-4" id="yourCurrencyDropDown">
                 <label for="currencyLocal">Your Currency</label>
-                <select class="form-control form-control-sm" id="currencyLocal">
+                <select class="form-control form-control-sm" id="currencyLocal" name="options[localCurrency]">
                     <option value="USD">USD</option>
                     <option value="CAD">CAD</option>
                     <option value="EUR">EUR</option>
@@ -52,54 +52,10 @@
                 <label class="checkbox-inline"><input type="checkbox" value="">Goat</label>
             </div>
             <div class="container col-4" id="submitForm">
-                <button id="submitButton" class="btn btn-light col-12">Search!</button>
+                <button class="btn btn-light col-12 submitButton">Search!</button>
             </div>
         </div>
     </form>
-</div>
-
-<div class="container col-6 d-inline-flex flex-column">
-        <h4>Search Results</h4>
-        <div class="card flex-row flex-wrap d-none searchResult0">
-            <img class="card-img-right searchShoeImage0" src="">
-            <div class="card-body">
-                <h3 class="card-title searchShoeName0"></h3>
-                <p class="card-text searchDetails0"></p>
-                <a href="#" class="btn btn-primary">See more details</a>
-            </div>
-        </div>
-        <div class="card flex-row flex-wrap d-none searchResult1">
-            <img class="card-img-right searchShoeImage1" src="">
-            <div class="card-body">
-                <h3 class="card-title searchShoeName1"></h3>
-                <p class="card-text searchDetails1"></p>
-                <a href="#" class="btn btn-primary">See more details</a>
-            </div>
-        </div>
-        <div class="card flex-row flex-wrap d-none searchResult2">
-            <img class="card-img-right searchShoeImage2" src="">
-            <div class="card-body">
-                <h3 class="card-title searchShoeName2"></h3>
-                <p class="card-text searchDetails2"></p>
-                <a href="#" class="btn btn-primary">See more details</a>
-            </div>
-        </div>
-        <div class="card flex-row flex-wrap d-none searchResult3">
-            <img class="card-img-right searchShoeImage3" src="">
-            <div class="card-body">
-                <h3 class="card-title searchShoeName3"></h3>
-                <p class="card-text searchDetails3"></p>
-                <a href="#" class="btn btn-primary">See more details</a>
-            </div>
-        </div>
-        <div class="card flex-row flex-wrap d-none searchResult4">
-            <img class="card-img-right searchShoeImage4" src="">
-            <div class="card-body">
-                <h3 class="card-title searchShoeName4"></h3>
-                <p class="card-text searchDetails4"></p>
-                <a href="#" class="btn btn-primary">See more details</a>
-            </div>
-        </div>
 </div>
 
 <%- include("../partials/footer") %>

@@ -43,7 +43,7 @@ nav {
 
 .card {
     margin-bottom: 20px;
-    height: 150px;
+    height: 180px;
 }
 
 .card-body {
@@ -51,9 +51,18 @@ nav {
 }
 
 .card-img-right {
-    max-height: 140px;
+    max-height: 170px;
     padding-left: 20px;
 }
+
+.submitButton {
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    border-color: #353535;
+}
+
 
 #title {
     text-decoration: underline;
@@ -88,14 +97,6 @@ nav {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 10px;
-}
-
-#submitButton {
-    background: #3a6186;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    border-color: #353535;
 }
 
 #submitForm {
