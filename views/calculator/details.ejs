@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+<div class="container col-md-12 m-0 p-0">
+    <section id="header" class="jumbotron text-center d-flex flex-column align-items-start">
+        <h1 class="display-4">PROFIT CALCULATOR</h1>
+        <p class="lead">Quickly Get Profit Numbers!</p>
+    </section>
+</div>
+
+<hr id="divider">
+
+<div class="container col-6">
+    <a href="/calculator" class="btn btn-light col-12 submitButton">Make Another Search</a>
+</div>
+
+<div class="container col-7 mt-3">
+    <div class="card" id="detailsCard">
+        <div class="container d-flex flex-row justify-content-between mt-2">
+            <div class="container d-flex flex-column">
+                <h2 class="card-title pull-left">Details for <%= product.name %></h2>
+                <h4>Retail Price: <%= helpers.calculateRetail(searchProduct, options) %> <%= options.localCurrency %></h4>
+            </div>
+            <img class="card-img-right" id="detailsImage" src="<%= searchProduct.image %>">
+        </div>
+        <div class="card-body d-flex flex-row flex-wrap justify-content-between">
+            <% product.variants.forEach(size => { %>
+                <div class="container col-3 mt-2">
+                    <h5>Size <%= size.size %></h5>
+                    <p>Highest Bid: <%= helpers.exchange(size.market.highestBid, options) %> <%= options.localCurrency %></p>
+                    <p>Lowest Ask: <%= helpers.exchange(size.market.lowestAsk,options) %> <%= options.localCurrency %></p>
+                    <p>Number of Bids: <%= size.market.numberOfBids %></p>
+                    <p>Sales in last 72hrs: <%= size.market.salesLast72Hours %></p>
+                    <p>Profit Locally: <%= helpers.calculateLocalProfit(searchProduct, size.market, options) %> <%= options.localCurrency %></p>
+                    <p>Profit on StockX: <%= helpers.calculateStockXProfit(searchProduct, size.market, options) %> <%= options.localCurrency %></p>
+                    <p>Profit on Ebay: <%= helpers.calculateEbayProfit(searchProduct, size.market, options) %> <%= options.localCurrency %></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

@@ -13,18 +13,25 @@
     <a href="/calculator" class="btn btn-light col-12 submitButton">Make Another Search</a>
 </div>
 
-<div class="container col-6 d-flex flex-column mt-2">
+<div class="container col-7 d-flex flex-column mt-2">
     <h4>Search Results</h4>
     <% products.forEach(product => { %>
         <div class="card flex-row flex-wrap">
-            <img class="card-img-right" src="<%= product.image %> ">
+            <img class="card-img-right" src="<%= product.image %>">
             <div class="card-body d-flex flex-column">
                 <h3 class="card-title"><%= product.name %> </h3>
                 <p class="card-text">Average Profit: <%= helpers.calculateResale(product, options) %> <%= options.localCurrency %></p>
                 <p class="card-text">Highest Bid Size: <%= product.market.highestBidSize %> </p>
                 <div class="d-flex flex-row justify-content-between">
-                    <a href="#" class="btn btn-light submitButton">See more Details</a>
-                    <a href="#" class="btn btn-light submitButton">Add to Favorites</a>
+                    <form action="/calculator/details" method="GET">
+                        <input type="submit" class="btn btn-light submitButton" value="View Details">
+                        <input type="hidden" name="product[link]" value="<%= product.urlKey %>">
+                        <input type="hidden" name="product[image]" value="<%= product.image %>">
+                        <input type="hidden" name="product[retail]" value="<%= product.retail %>">
+                    </form>
+                    <form action="/calculator/favorites" method="POST">
+                        <input type="submit" class="btn btn-light submitButton" value="Add to Favorites">
+                    </form>
                 </div>
             </div>
         </div>

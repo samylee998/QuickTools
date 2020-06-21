@@ -19,6 +19,7 @@ nav {
     margin-top: 10.25px;
 }
 
+
 .jumbotron {
     padding-bottom: 25px;
     margin-bottom: 0px;
@@ -124,4 +125,9 @@ nav {
 
 #yourCurrencyDropDown {
     padding-right: 0px;
+}
+
+#detailsImage {
+    max-width: 100%;
+    height: auto;
 }
